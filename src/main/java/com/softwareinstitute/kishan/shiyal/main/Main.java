@@ -42,7 +42,6 @@ public class Main {
             if (userInput == 1){
                 displayAnimals(animals);
             } else if (userInput == 2) {
-                addAnimal()
                 Animal temp;
 
                 String inputAnimalName;
