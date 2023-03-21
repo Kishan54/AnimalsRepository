@@ -14,6 +14,8 @@ public abstract class Animal {
     //////////////////////Methods/////////////////////
     public abstract String Sound();
 
+    public abstract Object reproduction();
+
     public String Sleep() {
         return "zzz";
     }
