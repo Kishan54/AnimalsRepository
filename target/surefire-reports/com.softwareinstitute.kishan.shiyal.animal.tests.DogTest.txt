@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.softwareinstitute.kishan.shiyal.animal.tests.DogTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.softwareinstitute.kishan.shiyal.animal.tests.DogTest
