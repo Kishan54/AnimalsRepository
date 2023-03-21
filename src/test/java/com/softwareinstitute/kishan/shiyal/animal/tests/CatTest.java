@@ -31,4 +31,10 @@ class CatTest {
         Cat testCat = new Cat();
         assertEquals("Meow", testCat.Sound(), "The expected sound of the cat was not matching");
     }
+
+    @Test
+    void testing_cat_reproduction(){
+        Cat testCat = new Cat();
+        //assertEquals("Meow", testCat.Sound(), "The expected sound of the cat was not matching");
+    }
 }
