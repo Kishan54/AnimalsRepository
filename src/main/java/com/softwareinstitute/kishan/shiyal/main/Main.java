@@ -42,32 +42,7 @@ public class Main {
             if (userInput == 1){
                 displayAnimals(animals);
             } else if (userInput == 2) {
-                Animal temp;
-
-                String inputAnimalName;
-                int inputAnimalAge;
-                int inputAnimalClass;
-
-                System.out.println("Which Animal to add: " +
-                        "\n1 - Dog" +
-                        "\n2 - Cat");
-                inputAnimalClass = myObj.nextInt();
-                System.out.println("Enter animal name: ");
-                inputAnimalName = myObj.next();
-                System.out.println("Enter animal age: ");
-                inputAnimalAge = myObj.nextInt();
-
-                if (inputAnimalClass == 1) {
-                    temp = new Dog();
-                    temp.setName(inputAnimalName);
-                    temp.setAge(inputAnimalAge);
-                    animals.add(temp);
-                } else if (inputAnimalClass == 2) {
-                    temp = new Cat();
-                    temp.setName(inputAnimalName);
-                    temp.setAge(inputAnimalAge);
-                    animals.add(temp);
-                }
+                addAnimal(animals, myObj);
             } else if (userInput == 3) {
                 breakingLoop = true;
             }
@@ -84,6 +59,40 @@ public class Main {
                         "\nName: " + animal.getName() +
                         "\nAge: " + animal.getAge());
             }
+        }
+    }
+
+    public static void addAnimal (ArrayList<Animal> animals, Scanner myObj) {
+        Animal temp;
+
+        String inputAnimalName;
+        int inputAnimalAge;
+        int inputAnimalClass;
+
+        System.out.println("Which Animal to add: " +
+                "\n1 - Dog" +
+                "\n2 - Cat");
+        inputAnimalClass = myObj.nextInt();
+        System.out.println("Enter animal name: ");
+        inputAnimalName = myObj.next();
+        System.out.println("Enter animal age: ");
+        inputAnimalAge = myObj.nextInt();
+        switch (inputAnimalClass) {
+            case (1):
+                temp = new Dog();
+                break;
+            case (2):
+                temp = new Cat();
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + inputAnimalClass);
+        }
+        try {
+            temp.setName(inputAnimalName);
+            temp.setAge(inputAnimalAge);
+            animals.add(temp);
+        } catch (Exception e) {
+            System.out.println("something went wrong");
         }
     }
 }
