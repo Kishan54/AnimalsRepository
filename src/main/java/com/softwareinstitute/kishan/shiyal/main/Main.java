@@ -51,20 +51,16 @@ public class Main {
     }
 
     private static ArrayList addingNewChild(Animal a, ArrayList<Animal> animals) {
-        Animal newBorn = null;
+
         String parentAnimalType = a.getClass().getSimpleName();
         System.out.println(parentAnimalType);
         System.out.println(parentAnimalType.equals("Cat"));
         if (parentAnimalType.equals("Cat")){
-            newBorn = new Cat();
-        } else if (parentAnimalType.equals("Dog")) {
-            newBorn = new Dog();
-        }
-        try {
+            Animal newBorn = new Cat();
             newBorn.reproduction(a, animals);
-            return animals;
-        } catch (Exception e) {
-            System.out.println("eeeeeee");
+        } else if (parentAnimalType.equals("Dog")) {
+            Animal newBorn = new Dog();
+            newBorn.reproduction(a, animals);
         }
         return animals;
     }
