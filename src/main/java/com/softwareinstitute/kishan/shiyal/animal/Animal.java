@@ -14,6 +14,8 @@ public abstract class Animal {
     }
 
     //////////////////////Methods/////////////////////
+
+    //breathe, excrete, eat, die
     public abstract String Sound();
 
     public abstract void reproduction(Animal a, ArrayList animals);
