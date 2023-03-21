@@ -1,5 +1,7 @@
 package com.softwareinstitute.kishan.shiyal.animal;
 
+import java.util.ArrayList;
+
 public abstract class Animal {
 
     //////////////////////Attributes//////////////////
@@ -14,7 +16,7 @@ public abstract class Animal {
     //////////////////////Methods/////////////////////
     public abstract String Sound();
 
-    public abstract Object reproduction();
+    public abstract void reproduction(Animal a, ArrayList animals);
 
     public String Sleep() {
         return "zzz";

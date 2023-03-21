@@ -1,5 +1,6 @@
 package com.softwareinstitute.kishan.shiyal.animal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Cat extends Mammal {
@@ -20,10 +21,15 @@ public class Cat extends Mammal {
         return "Meow";
     }
 
-    public Object reproduction() {
+
+    public void reproduction(Animal Parent, ArrayList animals) {
+        System.out.println("The parent is named " + Parent.getName());
+        System.out.println("Their ages is " + Parent.getAge());
         Cat newCat = new Cat();
-        newCat.setName(inputAnimalName = myObj.next());
-        newCat.setAge(inputAnimalAge = myObj.nextInt());
-        return newCat;
+        inputAnimalName = myObj.next();
+        inputAnimalAge = myObj.nextInt();
+        newCat.setName(inputAnimalName);
+        newCat.setAge(inputAnimalAge);
+        animals.add(newCat);
     }
 }

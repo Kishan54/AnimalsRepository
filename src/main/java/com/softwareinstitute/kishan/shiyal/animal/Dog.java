@@ -1,5 +1,6 @@
 package com.softwareinstitute.kishan.shiyal.animal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Dog extends Mammal {
@@ -20,8 +21,14 @@ public class Dog extends Mammal {
         return "Woof";
     }
 
-    public Object reproduction() {
+    public void reproduction(Animal Parent, ArrayList animals) {
+        System.out.println("The parent is named " + Parent.getName());
+        System.out.println("Their ages are " + Parent.getAge());
         Dog newDog = new Dog();
-        return newDog;
+        inputAnimalName = myObj.next();
+        newDog.setName(inputAnimalName);
+        inputAnimalAge = myObj.nextInt();
+        newDog.setAge(inputAnimalAge);
+        animals.add(newDog);
     }
 }

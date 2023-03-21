@@ -11,9 +11,9 @@ public abstract class Mammal extends Animal {
     }
 
     //////////////////////Methods/////////////////////
-    public abstract String Sound();
-
-
-    public abstract Object reproduction();
+//    public abstract String Sound();
+//
+//
+//    public abstract Object reproduction();
 
 }

@@ -6,7 +6,6 @@ import com.softwareinstitute.kishan.shiyal.animal.Dog;
 
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -32,6 +31,8 @@ public class Main {
         animals.add(b);
         animals.add(c);
 
+        animals = addingNewChild(a, animals);
+
         do {
             System.out.println("\nPlease choose an option: " +
                     "\n1 - Display Animals " +
@@ -47,6 +48,25 @@ public class Main {
                 breakingLoop = true;
             }
         } while (breakingLoop == false);
+    }
+
+    private static ArrayList addingNewChild(Animal a, ArrayList<Animal> animals) {
+        Animal newBorn = null;
+        String parentAnimalType = a.getClass().getSimpleName();
+        System.out.println(parentAnimalType);
+        System.out.println(parentAnimalType.equals("Cat"));
+        if (parentAnimalType.equals("Cat")){
+            newBorn = new Cat();
+        } else if (parentAnimalType.equals("Dog")) {
+            newBorn = new Dog();
+        }
+        try {
+            newBorn.reproduction(a, animals);
+            return animals;
+        } catch (Exception e) {
+            System.out.println("eeeeeee");
+        }
+        return animals;
     }
 
     public static void displayAnimals (ArrayList<Animal> animals){
