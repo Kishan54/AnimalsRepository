@@ -1,0 +1,23 @@
+package com.softwareinstitute.kishan.shiyal.animal.tests;
+
+import com.softwareinstitute.kishan.shiyal.animal.Cat;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CatTest {
+
+    @Test
+    public void testing_cat_age(){
+        Cat testCat = new Cat();
+        testCat.setAge(17);
+        assertEquals(17, testCat.getAge(), "The expected age of the cat was not the same");
+    }
+
+    @Test
+    public void testing_cat_name(){
+        Cat testCat = new Cat();
+        testCat.setName("");
+        assertEquals("", testCat.getName(), "The expected name of the cat was empty");
+    }
+}
